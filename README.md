@@ -94,7 +94,7 @@ The results will look like this:
 
 Another option is to rely on Rosette API to extract the textual content of a web page and parse it.  You can do this by giving a URI with the `-i/--input` option and additionally specifying the `-u/--content-uri` option to indicate that the input is a URI:
 
-	$ ./deps_to_graphy.py -i 'www.your-favorite-site.com' -u > your-favorite-site.svg
+	$ ./deps_to_graphy.py -u -i 'www.your-favorite-site.com' > your-favorite-site.svg
 	
 ### Token index labels
 One additional convenience option is the `-b/--label-indices` option.  This labels each node in the parse tree with an index.  This can help with reading the content from the graph as it shows the original order of the word tokens.  This is left off by default as it adds visual clutter, but it can be a useful option:
