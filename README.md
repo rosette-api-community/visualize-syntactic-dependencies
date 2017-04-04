@@ -1,10 +1,10 @@
-#Visualizing Dependency Parse Trees
+# Visualizing Dependency Parse Trees
 
-##Introduction
+## Introduction
 This repository includes a Python script that can produce graphical renderings of the dependency parse trees as returned by the [Rosette API `syntax/dependencies` endpoint](https://developer.rosette.com/features-and-functions#introduction17).  The script relies on [GraphViz](http://graphviz.org/) to produce SVG image files that can be viewed in a web browser.
 
-##Installation
-###Python Dependencies
+## Installation
+### Python Dependencies
 The Python script `deps_to_graph.py` is written for Python 3 (specifically Python 3.6.0, but should be compatible with most versions of Python 3).  To install the Python dependencies it's recommended to setup a virtual environment with `virtualenv`.  To begin, make sure [`virtualenv`](https://virtualenv.pypa.io/en/stable/installation/) is installed and up to date with [`pip`](https://pip.pypa.io/en/stable/installing/):
 
     $ pip3 install -U virtualenv
@@ -21,14 +21,14 @@ Finally, install the Python 3 dependences from the `requirements.txt` file:
 
     (parse_tree_viz) $ pip3 install -r requirements.txt
 
-###GraphViz
+### GraphViz
 `deps_to_graph.py` relies on the `dot` program from the [GraphViz](http://graphviz.org/) package to produce SVG images, so the last step is to install GraphViz.  GraphViz can be installed from most popular managers ([Homebrew](https://brew.sh/), [RPM](http://rpm.org/), etc.).  Once you've installed the GraphViz package, you can check if the `dot` binary is available:
 
     $ which dot
 
 If the above command prints a path to the `dot` binary, and you've followed the earlier steps to install the Python dependencies, then you're all set to start visualizing some dependency parse trees!
 
-##Usage
+## Usage
 This section describes how to use `deps_to_graph.py`:
 
     $ ./deps_to_graph.py -h
@@ -66,10 +66,10 @@ Note: If you want to circumvent supplying your API key with `-k/--key` (or typin
     $ echo "export ROSETTE_USER_KEY=<your-user-key>" >> ~/.bash_profile
     $ . ~/.bash_profile
 
-###Examples
+### Examples
 `deps_to_graph.py` can read input from `/dev/stdin`, a file path, or a URI.
 
-####Reading from `stdin`
+#### Reading from `stdin`
 
     $ echo "Let's make a graph" | ./deps_to_graph.py > graph.svg
     
@@ -79,7 +79,7 @@ It will look like this:
 
 ![graph.svg](graph.svg)
 
-###Reading from a file
+#### Reading from a file
 
 	# create a sample text file to read from
 	$ echo "The rules governing the hierarchical structure of a sentence are called “syntax” in linguistics. Knowing the structure of a sentence helps to understand how the words in a sentence are related to each other." > data.txt
@@ -90,13 +90,13 @@ The results will look like this:
 
 ![data.svg](data.svg)
 
-###Reading from a URI
+#### Reading from a URI
 
 Another option is to rely on Rosette API to extract the textual content of a web page and parse it.  You can do this by giving a URI with the `-i/--input` option and additionally specifying the `-u/--content-uri` option to indicate that the input is a URI:
 
 	$ ./deps_to_graphy.py -i 'www.your-favorite-site.com' -u > your-favorite-site.svg
 	
-####Token index labels
+### Token index labels
 One additional convenience option is the `-b/--label-indices` option.  This labels each node in the parse tree with an index.  This can help with reading the content from the graph as it shows the original order of the word tokens.  This is left off by default as it adds visual clutter, but it can be a useful option:
 
 	$ ./deps_to_graph.py -b -i data.txt > labeled-data.svg
