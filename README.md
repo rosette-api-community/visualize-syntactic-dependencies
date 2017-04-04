@@ -19,7 +19,7 @@ Then, activate the virtual environment:
 
 Finally, install the Python 3 dependences from the `requirements.txt` file:
 
-    (parse_tree_viz) $ pip3 install -r requirements.txt
+    $ pip3 install -r requirements.txt
 
 ### GraphViz
 `deps_to_graph.py` relies on the `dot` program from the [GraphViz](http://graphviz.org/) package to produce SVG images, so the last step is to install GraphViz.  GraphViz can be installed from most popular managers ([Homebrew](https://brew.sh/), [RPM](http://rpm.org/), etc.).  Once you've installed the GraphViz package, you can check if the `dot` binary is available:
