@@ -61,7 +61,7 @@ This section describes how to use `deps_to_graph.py`:
 
 The script takes input, makes a request to the Rosette API on your behalf, and converts the resulting JSON into an SVG image.  The SVG data is written to `/dev/stdout` by default, or to the given file path specified with the `-o/--output` option.
 
-Note: If you want to circumvent supplying your API key with `-k/--key` (or typing it at the prompt) on every execution of the script, you can set a `ROSETTE_USER_KEY` enviroment variable:
+Note: If you want to circumvent supplying your [Rosette API key](https://developer.rosette.com/) with `-k/--key` (or typing it at the prompt) on every execution of the script, you can set a `ROSETTE_USER_KEY` enviroment variable:
 
     $ echo "export ROSETTE_USER_KEY=<your-user-key>" >> ~/.bash_profile
     $ . ~/.bash_profile
