@@ -77,7 +77,7 @@ You can look at the resulting `graph.svg` by opening it in your web browser.
 
 It will look like this:
 
-![graph.svg](graph.svg)
+![graph.svg](https://github.com/rosette-api-community/visualize-syntactic-dependencies/tree/master/svgs/graph.svg)
 
 #### Reading from a file
 
@@ -88,7 +88,7 @@ It will look like this:
 
 The results will look like this:
 
-![data.svg](data.svg)
+![data.svg](https://github.com/rosette-api-community/visualize-syntactic-dependencies/tree/master/svgs/data.svg)
 
 #### Reading from a URI
 
@@ -103,4 +103,4 @@ One additional convenience option is the `-b/--label-indices` option.  This labe
 
 With token index labels, the trees looks like this:
 
-![labeled-data.svg](labeled-data.svg)
+![labeled-data.svg](https://github.com/rosette-api-community/visualize-syntactic-dependencies/tree/master/svgs/labeled-data.svg)
