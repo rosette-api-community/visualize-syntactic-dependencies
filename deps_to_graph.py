@@ -2,8 +2,6 @@
 """Render Rosette API dependency parse trees as SVG via Graphviz"""
 
 import argparse
-import io
-import json
 import os
 import re
 import subprocess
