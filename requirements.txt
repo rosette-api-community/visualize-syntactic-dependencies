@@ -1,6 +1,6 @@
 certifi==2018.11.29
 chardet==3.0.4
 idna==2.8
-requests==2.21.0
+requests==2.27.1
 rosette-api==1.9.0
-urllib3==1.24.2
+urllib3==1.26.5
